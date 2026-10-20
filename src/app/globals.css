@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #10140f;
+  --bg-soft: #171d16;
+  --panel: #1c241b;
+  --line: #2d3a2a;
+  --gold: #e8b86d;
+  --gold-soft: #f3d7a5;
+  --ink: #f4f1ea;
+  --muted: #b7c2b0;
+  --live: #8fd19e;
+  --danger: #e07a5f;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-soft: var(--bg-soft);
+  --color-panel: var(--panel);
+  --color-line: var(--line);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-live: var(--live);
+  --color-danger: var(--danger);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+body {
+  background-image:
+    radial-gradient(1200px 600px at 10% -10%, rgba(232, 184, 109, 0.12), transparent 50%),
+    radial-gradient(900px 500px at 100% 0%, rgba(143, 209, 158, 0.08), transparent 45%),
+    linear-gradient(180deg, #10140f 0%, #0c100c 100%);
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(232, 184, 109, 0.35);
+}
+
+.camera-grid {
+  background-image:
+    linear-gradient(rgba(244, 241, 234, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(244, 241, 234, 0.05) 1px, transparent 1px);
+  background-size: 36px 36px;
+}

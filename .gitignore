@@ -1,0 +1,12 @@
+node_modules
+.next
+out
+.DS_Store
+*.log
+.env
+.env.local
+.env.production
+.vercel
+tsconfig.tsbuildinfo
+public/mediapipe
+public/models/*.task
