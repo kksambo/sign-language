@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { languageShort } from "@/lib/languages";
 import { readCachedHistory, removeCachedHistory, type CachedTranslation } from "@/lib/offline";
 import { speak } from "@/lib/speech";
 
@@ -59,7 +60,7 @@ export function HistoryList() {
               <div>
                 <p className="font-display text-2xl">{row.text}</p>
                 <p className="mt-1 text-sm text-muted">
-                  {row.signLanguage.toUpperCase()} · {new Date(row.createdAt).toLocaleString()} · {row.signsDetected}{" "}
+                  {languageShort(row.signLanguage)} · {new Date(row.createdAt).toLocaleString()} · {row.signsDetected}{" "}
                   signs
                 </p>
               </div>

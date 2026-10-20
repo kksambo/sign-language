@@ -13,6 +13,7 @@ import {
 } from "@/lib/preferences";
 import { speak, stopSpeaking } from "@/lib/speech";
 import { SignGuide } from "@/components/SignGuide";
+import { SIGN_LANGUAGES } from "@/lib/languages";
 
 const HOLD_FRAMES = 14;
 const CONNECTIONS: [number, number][] = [
@@ -369,8 +370,11 @@ export function WebcamTranslator() {
                 persistPrefs({ preferredLanguage: event.target.value });
               }}
             >
-              <option value="asl">American Sign Language</option>
-              <option value="bsl">British Sign Language</option>
+              {SIGN_LANGUAGES.map((item) => (
+                <option key={item.id} value={item.id}>
+                  {item.label}
+                </option>
+              ))}
             </select>
           </label>
           <label className="rounded-2xl border border-line bg-panel p-3 text-sm">
@@ -500,6 +504,11 @@ export function WebcamTranslator() {
         {error && <p className="text-sm text-danger">{error}</p>}
         {notice && <p className={`text-sm ${noticeTone === "bad" ? "text-danger" : "text-live"}`}>{notice}</p>}
 
+        {language === "sasl" && (
+          <p className="rounded-2xl border border-line bg-bg-soft p-3 text-sm text-muted">
+            SASL fingerspelling uses a one-handed alphabet. Phrase mode still works for everyday signs.
+          </p>
+        )}
         {language === "bsl" && (
           <p className="rounded-2xl border border-line bg-bg-soft p-3 text-sm text-muted">
             BSL two-handed fingerspelling is limited here. Phrase mode still works for everyday signs.

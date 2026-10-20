@@ -18,8 +18,9 @@ export function GuideContent() {
         Sit in good light, keep one hand in the camera, and hold each sign until it locks.
       </h1>
       <p className="mt-4 max-w-2xl text-lg text-muted">
-        The browser tracks 21 hand landmarks with MediaPipe, then classifies ASL fingerspelling and everyday phrases.
-        Video, settings, and saved translations stay on this device.
+        The browser tracks 21 hand landmarks with MediaPipe, then classifies one-handed fingerspelling and everyday
+        phrases for American Sign Language and South African Sign Language. Video, settings, and saved translations stay
+        on this device.
       </p>
 
       <section className="mt-10 grid gap-4 md:grid-cols-3">
@@ -50,7 +51,7 @@ export function GuideContent() {
       </section>
 
       <section className="mt-10">
-        <h2 className="font-display text-3xl">ASL alphabet</h2>
+        <h2 className="font-display text-3xl">One-handed alphabet (ASL and SASL)</h2>
         <div className="mt-4 grid gap-2 sm:grid-cols-2 md:grid-cols-3">
           {letterList.map((row) => (
             <article key={row.gloss} className="flex items-start gap-3 rounded-2xl border border-line bg-panel p-3">
