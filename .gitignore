@@ -10,3 +10,4 @@ out
 tsconfig.tsbuildinfo
 public/mediapipe
 public/models/*.task
+.env*

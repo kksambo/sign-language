@@ -10,15 +10,13 @@ docker compose up --build
 
 Open [http://localhost:3000](http://localhost:3000) and allow camera access.
 
-## Deploy to Vercel
+## Live site
 
-No database or env vars are required. Push the project to GitHub, then import it at [vercel.com/new](https://vercel.com/new). Or from this folder:
+- App: [https://sign-language-sooty.vercel.app](https://sign-language-sooty.vercel.app)
+- Dashboard: [https://vercel.com/kksambos-projects/sign-language](https://vercel.com/kksambos-projects/sign-language)
+- Source: [https://github.com/kksambo/sign-language](https://github.com/kksambo/sign-language)
 
-```bash
-npx vercel
-```
-
-The camera only works over HTTPS, which Vercel provides. Allow camera access on the live site.
+Pushes to `main` deploy automatically. Allow camera access on the live site.
 
 ## Local development
 
